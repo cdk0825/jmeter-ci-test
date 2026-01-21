@@ -1,4 +1,4 @@
-name: master, full load test - JMeter로 heavy 부하테스트
+name: master, full load test - JMeter로 빡센 부하테스트
 
 on:
   push:
@@ -34,8 +34,7 @@ jobs:
       - name: Run JMeter Full Load Test
         run: |
           mkdir -p master_dashboard_report
-          # master 브랜치에 맞게 '풀로드.jmx' 파일 경로 지정
-          ./apache-jmeter-5.6.3/bin/jmeter -n -t ./full-load.jmx -l ./master_result.jtl -e -o ./master_dashboard_report
+          ./apache-jmeter-5.6.3/bin/jmeter -n -t ./full-load-test.jmx -l ./master_result.jtl -e -o ./master_dashboard_report
 
       - name: Upload JMeter Full Load Report
         uses: actions/upload-artifact@v4
