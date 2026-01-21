@@ -1,4 +1,4 @@
-name: Pytest with Allure Report
+name: all branch, Pytest + Allure 리폿
 
 on:
   push:
